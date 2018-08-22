@@ -7,7 +7,6 @@ import basic from "./basic";
 
 describe("basic", () => {
   it("should add two numbers and return the result", () => {
-    // @TODO
-    expect(false).toEqual(true);
+    expect(basic(1, 1)).toEqual(2);
   });
 });

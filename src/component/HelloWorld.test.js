@@ -8,9 +8,8 @@ describe('HelloWorld', () => {
      * Stuck? Check this out:
      * https://airbnb.io/enzyme/docs/api/ShallowWrapper/type.html
      */
-
-    // @TODO
-    expect(false).toEqual(true);
+     const wrapper = shallow(<HelloWorld />);
+     expect(wrapper.type()).toEqual('div');
   });
 
   it('should have a class name hello-world', () => {
@@ -19,8 +18,8 @@ describe('HelloWorld', () => {
      * https://airbnb.io/enzyme/docs/api/ShallowWrapper/prop.html
      */
 
-    // @TODO
-    expect(false).toEqual(true);
+     const wrapper = shallow(<HelloWorld />);
+     expect(wrapper.prop('className')).toEqual('hello-world');
   });
 
   it('should contain the text "Hello World" when no name prop is specified', () => {
@@ -29,12 +28,12 @@ describe('HelloWorld', () => {
      * https://airbnb.io/enzyme/docs/api/ShallowWrapper/text.html
      */
 
-    // @TODO
-    expect(false).toEqual(true);
+     const wrapper = shallow(<HelloWorld />);
+     expect(wrapper.text()).toEqual('Hello World');
   });
 
   it('should contain the text "Hello " followed by the value of the name prop passed', () => {
-    // @TODO
-    expect(false).toEqual(true);
+    const wrapper = shallow(<HelloWorld name="Jason" />);
+    expect(wrapper.text()).toEqual('Hello Jason');
   });
 });
